@@ -1,0 +1,25 @@
+﻿<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#IIT_Madras_vs_IIT_Kanpur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#IIT_Madras_vs_IIT_Kanpur> <http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#match_date> "2023-05-01"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#IIT_Madras_vs_IIT_Kanpur> <http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#match_id> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#IIT_Madras_vs_IIT_Kanpur> <http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#match_result> "Team A 2-1 Team B"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#IIT_Madras_vs_IIT_Kanpur> <http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#match_venue> "Stadium A"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#IIT_Madras_vs_IIT_Kanpur> <http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#has_team> <http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#IIT Madras> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#IIT Madras> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+
+
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Sarthak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Pankaj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Ayush> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Mayank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Chinmay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Devansh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Sidhant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Rakesh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Mohan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Bishal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Akshay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Sunny> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Kapil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/bishal/ontologies/2023/3/tournament#Rohan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

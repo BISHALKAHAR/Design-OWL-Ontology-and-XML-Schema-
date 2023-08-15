@@ -1,0 +1,681 @@
+@prefix : <http://www.semanticweb.org/bisha/ontologies/2023/3/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/bisha/ontologies/2023/3/> .
+
+<http://www.semanticweb.org/bisha/ontologies/2023/3/tournament> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/captainOf
+:captainOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :hasCaptain ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Player ;
+           rdfs:range :Team .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/fromInstitute
+:fromInstitute rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Player ;
+               rdfs:range :Team .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasCaptain
+:hasCaptain rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdf:type owl:InverseFunctionalProperty ;
+            rdfs:domain :Team ;
+            rdfs:range :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasEndDate
+:hasEndDate rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Match ,
+                        :Tounament ;
+            rdfs:range :Date .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasPlayer
+:hasPlayer rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf :playsFor ;
+           rdf:type owl:InverseFunctionalProperty ;
+           rdfs:domain :Team ;
+           rdfs:range :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasRole
+:hasRole rdf:type owl:ObjectProperty ;
+         rdfs:domain :Player ;
+         rdfs:range :Role .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasStartDate
+:hasStartDate rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain :Match ,
+                          :Tounament ;
+              rdfs:range :Date .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasTeam
+:hasTeam rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Match ;
+         rdfs:range :Team .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasWonMatch
+:hasWonMatch rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Team ;
+             rdfs:range :Match .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/isLocationOf
+:isLocationOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Location ;
+              rdfs:range :Tounament .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/organised
+:organised rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Tounament ;
+           rdfs:range :Venue .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/playsFor
+:playsFor rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Player ;
+          rdfs:range :Team .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasAssists
+:hasAssists rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Player ;
+            rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasJerseyNumber
+:hasJerseyNumber rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Player ;
+                 rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasMatchId
+:hasMatchId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Match ;
+            rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Player ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasPoints
+:hasPoints rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Player ;
+           rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasRebounds
+:hasRebounds rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Player ;
+             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasScored
+:hasScored rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Team ;
+           rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasTeamName
+:hasTeamName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Team ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasTeamSize
+:hasTeamSize rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Team ;
+             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/hasTournamentnName
+:hasTournamentnName rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Tounament ;
+                    rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Date
+:Date rdf:type owl:Class ;
+      rdfs:subClassOf :Tounament .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Female
+:Female rdf:type owl:Class ;
+        rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/GoodPlayer
+:GoodPlayer rdf:type owl:Class ;
+            rdfs:subClassOf :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf :Tounament .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Male
+:Male rdf:type owl:Class ;
+      rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Match
+:Match rdf:type owl:Class ;
+       rdfs:subClassOf :Tounament .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Player
+:Player rdf:type owl:Class ;
+        rdfs:subClassOf :Person .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Role
+:Role rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Status
+:Status rdf:type owl:Class ;
+        rdfs:subClassOf :Match .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Team
+:Team rdf:type owl:Class ;
+      rdfs:subClassOf :Tounament ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCaptain ;
+                        owl:someValuesFrom :Player
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasPlayer ;
+                        owl:allValuesFrom :Player
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasWonMatch ;
+                        owl:allValuesFrom :Match
+                      ] .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Tounament
+:Tounament rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Venue
+:Venue rdf:type owl:Class ;
+       rdfs:subClassOf :Tounament .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Akash_Roy
+:Akash_Roy rdf:type owl:NamedIndividual ,
+                    :Player ;
+           :hasRole :CENTRE ;
+           :playsFor :IIT_DHANBAD ;
+           :hasAssists "6"^^xsd:int ;
+           :hasJerseyNumber "7"^^xsd:int ;
+           :hasPoints "23"^^xsd:int ;
+           :hasRebounds "4"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Alok_Gogoi
+:Alok_Gogoi rdf:type owl:NamedIndividual ,
+                     :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Alok_Singh
+:Alok_Singh rdf:type owl:NamedIndividual ,
+                     :Player ;
+            :hasRole :POINT_GUARD .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Aman_Singh
+:Aman_Singh rdf:type owl:NamedIndividual ,
+                     :Player ;
+            :playsFor :IIT_KANPUR ;
+            :hasAssists "11"^^xsd:int ;
+            :hasJerseyNumber "5"^^xsd:int ;
+            :hasPoints "23"^^xsd:int ;
+            :hasRebounds "2"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Amit_Kumar
+:Amit_Kumar rdf:type owl:NamedIndividual ,
+                     :GoodPlayer ,
+                     :Player ;
+            :captainOf :IIT_MADRAS ;
+            :playsFor :IIT_MADRAS ;
+            :hasAssists "5"^^xsd:int ;
+            :hasJerseyNumber "7"^^xsd:int ;
+            :hasRebounds "6"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Amit_Sharma
+:Amit_Sharma rdf:type owl:NamedIndividual ,
+                      :Player ;
+             :hasRole :POWER_FORWARD ;
+             :playsFor :IIT_MADRAS ;
+             :hasAssists "5"^^xsd:int ;
+             :hasJerseyNumber "32"^^xsd:int ;
+             :hasPoints "31"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Anadeep_Bandharu
+:Anadeep_Bandharu rdf:type owl:NamedIndividual ,
+                           :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Anil_Kumar
+:Anil_Kumar rdf:type owl:NamedIndividual ,
+                     :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Ashutosh_Dev
+:Ashutosh_Dev rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Berranno_Nandi
+:Berranno_Nandi rdf:type owl:NamedIndividual ,
+                         :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Bibhuti_Majhi
+:Bibhuti_Majhi rdf:type owl:NamedIndividual ,
+                        :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/CENTRE
+:CENTRE rdf:type owl:NamedIndividual ,
+                 :Role .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/COMPLETED
+:COMPLETED rdf:type owl:NamedIndividual ,
+                    :Status .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Deepak_Patel
+:Deepak_Patel rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Harish_Singh
+:Harish_Singh rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Harpal_Singh
+:Harpal_Singh rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Harshit_Ganda
+:Harshit_Ganda rdf:type owl:NamedIndividual ,
+                        :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_BHU
+:IIT_BHU rdf:type owl:NamedIndividual ,
+                  :Team ;
+         :hasPlayer :Nandan_Bhowmik ,
+                    :Prem_Jeet_Singh ,
+                    :Rupak_Gupta ,
+                    :Shashank_Rajput ,
+                    :Suraj_Kumar ;
+         :hasTeamSize "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_BOMBAY
+:IIT_BOMBAY rdf:type owl:NamedIndividual ,
+                     :Team ;
+            :hasPlayer :Alok_Singh ,
+                       :Deepak_Patel ,
+                       :Harpal_Singh ,
+                       :Pankaj_Singh ,
+                       :Prakesh_Singh ;
+            :hasTeamSize "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_DELHI
+:IIT_DELHI rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :hasPlayer :Anadeep_Bandharu ,
+                      :Ashutosh_Dev ,
+                      :Rahul_Kurmi ,
+                      :Raunak_Singh ,
+                      :Sunil_Singha ;
+           :hasTeamSize "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_DELHI_VS_IIT_KANPUR
+:IIT_DELHI_VS_IIT_KANPUR rdf:type owl:NamedIndividual ,
+                                  :Match ;
+                         :hasEndDate <http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-04> ;
+                         :hasStartDate <http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-03> ;
+                         :hasMatchId "03"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_DHANBAD
+:IIT_DHANBAD rdf:type owl:NamedIndividual ,
+                      :Team ;
+             :hasCaptain :Alok_Gogoi ;
+             :hasPlayer :Akash_Roy ,
+                        :Alok_Gogoi ,
+                        :Harshit_Ganda ,
+                        :Ravi_Kumar ,
+                        :Subham_Poddar ;
+             :hasTeamSize "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_GUWAHATI
+:IIT_GUWAHATI rdf:type owl:NamedIndividual ,
+                       :Team ;
+              :hasCaptain :jaydeep_Varun ;
+              :hasPlayer :Ram_Prasad_Kumar ,
+                         :Sekhar_Gupta ,
+                         :Shankadeep_Singh ,
+                         :Sumit_Sharma ,
+                         :jaydeep_Varun ;
+              :hasTeamSize "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_GUWAHTI_VS_IIT_BHU
+:IIT_GUWAHTI_VS_IIT_BHU rdf:type owl:NamedIndividual ,
+                                 :Match ;
+                        :hasEndDate <http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-07> ;
+                        :hasStartDate <http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-07> .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_KANPUR
+:IIT_KANPUR rdf:type owl:NamedIndividual ,
+                     :Team ;
+            :hasPlayer :Aman_Singh ,
+                       :Harish_Singh ,
+                       :Rahul_Das ,
+                       :Sandeep_Lala ,
+                       :Suraj_Prasad ;
+            :hasTeamSize "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_KANPUR_STADIUM
+:IIT_KANPUR_STADIUM rdf:type owl:NamedIndividual ,
+                             :Venue .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_MADRAS
+:IIT_MADRAS rdf:type owl:NamedIndividual ,
+                     :Team ;
+            :hasCaptain :Amit_Kumar ;
+            :hasPlayer :Amit_Sharma ,
+                       :Anil_Kumar ,
+                       :Rajesh_Patel ,
+                       :Rohit_Gupta ;
+            :hasTeamSize "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_MADRAS_VS_IIT_BOMBAY
+:IIT_MADRAS_VS_IIT_BOMBAY rdf:type owl:NamedIndividual ,
+                                   :Match ;
+                          :hasMatchId "12"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_MANDI
+:IIT_MANDI rdf:type owl:NamedIndividual ,
+                    :Team ;
+           :hasCaptain :Sawan_Anand ;
+           :hasPlayer :Berranno_Nandi ,
+                      :Bibhuti_Majhi ,
+                      :Sandip_Singh ,
+                      :Sawan_Anand ,
+                      :Suraj_Kumar ;
+           :hasTeamSize "5"^^xsd:int .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_MANDI_VS_IIT_DHANBAD
+:IIT_MANDI_VS_IIT_DHANBAD rdf:type owl:NamedIndividual ,
+                                   :Match .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/IIT_Madras_Basketball_court
+:IIT_Madras_Basketball_court rdf:type owl:NamedIndividual ,
+                                      :Venue .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Inter-IIT_Basketball
+:Inter-IIT_Basketball rdf:type owl:NamedIndividual ,
+                               :Tounament .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Nandan_Bhowmik
+:Nandan_Bhowmik rdf:type owl:NamedIndividual ,
+                         :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/ONGOING
+:ONGOING rdf:type owl:NamedIndividual ,
+                  :Status .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/POINT_GUARD
+:POINT_GUARD rdf:type owl:NamedIndividual ;
+             :playsFor :IIT_MADRAS .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/POWER_FORWARD
+:POWER_FORWARD rdf:type owl:NamedIndividual ,
+                        :Role .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Pankaj_Singh
+:Pankaj_Singh rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Prakesh_Singh
+:Prakesh_Singh rdf:type owl:NamedIndividual ,
+                        :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Prem_Jeet_Singh
+:Prem_Jeet_Singh rdf:type owl:NamedIndividual ,
+                          :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Rahul_Das
+:Rahul_Das rdf:type owl:NamedIndividual ,
+                    :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Rahul_Kurmi
+:Rahul_Kurmi rdf:type owl:NamedIndividual ,
+                      :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Rajesh_Patel
+:Rajesh_Patel rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Ram_Prasad_Kumar
+:Ram_Prasad_Kumar rdf:type owl:NamedIndividual ,
+                           :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Raunak_Singh
+:Raunak_Singh rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Ravi_Kumar
+:Ravi_Kumar rdf:type owl:NamedIndividual ,
+                     :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Rohit_Gupta
+:Rohit_Gupta rdf:type owl:NamedIndividual ,
+                      :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Rupak_Gupta
+:Rupak_Gupta rdf:type owl:NamedIndividual ,
+                      :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/SHOOTING_GUARD
+:SHOOTING_GUARD rdf:type owl:NamedIndividual ,
+                         :Role .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/SMALL_FORWARD
+:SMALL_FORWARD rdf:type owl:NamedIndividual ,
+                        :Role .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Sandeep_Lala
+:Sandeep_Lala rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Sandip_Singh
+:Sandip_Singh rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Sawan_Anand
+:Sawan_Anand rdf:type owl:NamedIndividual ,
+                      :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Sekhar_Gupta
+:Sekhar_Gupta rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Shankadeep_Singh
+:Shankadeep_Singh rdf:type owl:NamedIndividual ,
+                           :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Shashank_Rajput
+:Shashank_Rajput rdf:type owl:NamedIndividual ,
+                          :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Subham_Poddar
+:Subham_Poddar rdf:type owl:NamedIndividual ,
+                        :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Sumit_Sharma
+:Sumit_Sharma rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Sunil_Singha
+:Sunil_Singha rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Suraj_Kumar
+:Suraj_Kumar rdf:type owl:NamedIndividual ,
+                      :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Suraj_Prasad
+:Suraj_Prasad rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/Suraj_Thakur
+:Suraj_Thakur rdf:type owl:NamedIndividual ,
+                       :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/UPCOMING
+:UPCOMING rdf:type owl:NamedIndividual ,
+                   :Status .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/jaydeep_Varun
+:jaydeep_Varun rdf:type owl:NamedIndividual ,
+                        :Player .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-01
+<http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-01> rdf:type owl:NamedIndividual ,
+                                                                                    :Date .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-02
+<http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-02> rdf:type owl:NamedIndividual ,
+                                                                                    :Date .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-03
+<http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-03> rdf:type owl:NamedIndividual ,
+                                                                                    :Date .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-04
+<http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-04> rdf:type owl:NamedIndividual ,
+                                                                                    :Date .
+
+
+###  http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-07
+<http://www.semanticweb.org/bisha/ontologies/2023/3/tournament#2023-04-07> rdf:type owl:NamedIndividual ,
+                                                                                    :Date .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
