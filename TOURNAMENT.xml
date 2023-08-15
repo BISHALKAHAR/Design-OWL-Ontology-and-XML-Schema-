@@ -1,0 +1,373 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE tournament [
+<!ELEMENT tournament (match*)>
+
+<!ATTLIST tournament tournament-name CDATA #REQUIRED 
+start_date  CDATA #REQUIRED 
+end_date CDATA #REQUIRED>
+
+<!ELEMENT match (team+)>
+
+<!ATTLIST match id CDATA #REQUIRED
+       	venue CDATA #REQUIRED
+       	status (upcoming|ongoing|completed) #REQUIRED
+       	start_time CDATA #REQUIRED>
+
+<!ELEMENT team (player+, total_score?)>
+
+<!ATTLIST team name CDATA #REQUIRED
+       	institute CDATA #REQUIRED>
+
+<!ELEMENT player (stats)>
+
+<!ATTLIST player name CDATA #REQUIRED
+       	role CDATA #REQUIRED
+       	jersey_number CDATA #REQUIRED>
+
+<!ELEMENT stats (points_scored, rebounds, assists)>
+<!ELEMENT points_scored (#PCDATA)>
+<!ELEMENT rebounds (#PCDATA)>
+<!ELEMENT assists (#PCDATA)>
+<!ELEMENT total_score (#PCDATA)>
+]>
+
+
+
+
+
+
+
+
+<tournament tournament-name='Inter-IIT Basketball' start_date="2023-04-01" end_date="2023-04-07">
+   	<match id="1" venue="IIT Madras Basketball court" status="completed" start_time="2023-04-01T19:00:00">
+    	<team name="IIT Madras" institute="IIT Madras">
+      	<player name="Amit Sharma" role="Point Guard" jersey_number="5">
+        	<stats>
+          	<points_scored>12</points_scored>
+          	<rebounds>4</rebounds>
+          	<assists>7</assists>
+        	</stats>
+      	</player>
+      	<player name="Rajesh Patel" role="Small Forward" jersey_number="10">
+        	<stats>
+          	<points_scored>15</points_scored>
+          	<rebounds>6</rebounds>
+          	<assists>3</assists>
+        	</stats>
+      	</player>
+      	<player name="Sandeep Singh" role="Power Forward" jersey_number="12">
+        	<stats>
+          	<points_scored>18</points_scored>
+          	<rebounds>10</rebounds>
+          	<assists>2</assists>
+        	</stats>
+      	</player>
+      	<player name="Anil Kumar" role="Centre" jersey_number="17">
+        	<stats>
+          	<points_scored>8</points_scored>
+          	<rebounds>12</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+      	<player name="Rohit Gupta" role="Shooting Guard" jersey_number="23">
+        	<stats>
+          	<points_scored>7</points_scored>
+          	<rebounds>2</rebounds>
+          	<assists>4</assists>
+        	</stats>
+      	</player>
+<total_score>60</total_score>
+    	</team>
+    	
+    	<team name="IIT Bombay" institute="IIT Bombay">
+      	<player name="Prakash Singh" role="Point Guard" jersey_number="4">
+        	<stats>
+          	<points_scored>10</points_scored>
+          	<rebounds>2</rebounds>
+          	<assists>8</assists>
+        	</stats>
+      	</player>
+      	<player name="Deepak Patel" role="Small Forward" jersey_number="8">
+        	<stats>
+          	<points_scored>14</points_scored>
+          	<rebounds>4</rebounds>
+          	<assists>4</assists>
+        	</stats>
+      	</player>
+      	<player name="Alok Singh" role="Power Forward" jersey_number="13">
+        	<stats>
+          	<points_scored>12</points_scored>
+          	<rebounds>8</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+      	<player name="Harpal Singh" role="Centre" jersey_number="1">
+        	<stats>
+          	<points_scored>12</points_scored>
+          	<rebounds>3</rebounds>
+          	<assists>1</assists>
+        	</stats>
+      	</player>
+      	<player name="Pankaj Singh" role="Shooting Guard" jersey_number="3">
+        	<stats>
+          	<points_scored>22</points_scored>
+          	<rebounds>3</rebounds>
+          	<assists>2</assists>
+        	</stats>
+      	</player>
+<total_score>70</total_score>
+      	</team>
+      	
+   	</match>
+ 	 
+ 	 
+  	<match id="2" venue="IIT Madras Basketball court 2" status="completed" start_time="2023-04-02T19:00:00">
+    	<team name="IIT Mandi" institute="IIT Mandi">
+      	<player name="Berranno Nandi" role="Point Guard" jersey_number="22">
+        	<stats>
+          	<points_scored>11</points_scored>
+          	<rebounds>5</rebounds>
+          	<assists>6</assists>
+        	</stats>
+      	</player>
+      	<player name="Suraj Kumar" role="Small Forward" jersey_number="11">
+        	<stats>
+          	<points_scored>16</points_scored>
+          	<rebounds>6</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+      	<player name="Bibhuti Majhi" role="Power Forward" jersey_number="23">
+        	<stats>
+          	<points_scored>16</points_scored>
+          	<rebounds>10</rebounds>
+          	<assists>8</assists>
+        	</stats>
+      	</player>
+      	<player name="Amit Kumar" role="Centre" jersey_number="65">
+        	<stats>
+          	<points_scored>10</points_scored>
+          	<rebounds>9</rebounds>
+          	<assists>7</assists>
+        	</stats>
+      	</player>
+      	<player name="Sawan Anand" role="Shooting Guard" jersey_number="03">
+        	<stats>
+          	<points_scored>6</points_scored>
+          	<rebounds>3</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+	<total_score>59</total_score>
+    	</team>
+    	
+    	<team name="IIT Dhanbad" institute="IIT Dhanbad">
+      	<player name="Subham Poddar" role="Point Guard" jersey_number="10">
+        	<stats>
+          	<points_scored>18</points_scored>
+          	<rebounds>5</rebounds>
+          	<assists>11</assists>
+        	</stats>
+      	</player>
+      	<player name="Akash Roy" role="Small Forward" jersey_number="55">
+        	<stats>
+          	<points_scored>15</points_scored>
+          	<rebounds>5</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+      	<player name="Ravi Kumar" role="Power Forward" jersey_number="89">
+        	<stats>
+          	<points_scored>15</points_scored>
+          	<rebounds>7</rebounds>
+          	<assists>6</assists>
+        	</stats>
+      	</player>
+      	<player name="Harshit Ganda" role="Small Forward" jersey_number="04">
+        	<stats>
+          	<points_scored>10</points_scored>
+          	<rebounds>2</rebounds>
+          	<assists>4</assists>
+        	</stats>
+      	</player>
+      	<player name="Alok Gogoi" role="Shooting Guard" jersey_number="72">
+        	<stats>
+          	<points_scored>23</points_scored>
+          	<rebounds>5</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+	<total_score>81</total_score>
+      	</team>
+      	
+      	</match>
+     	 
+  	<match id="3" venue="IIT Madras Basketball court 2" status="completed" start_time="2023-04-03T19:00:00">
+    	<team name="IIT Delhi" institute="IIT Delhi">
+      	<player name="Raunak Singh" role="Point Guard" jersey_number="12">
+        	<stats>
+          	<points_scored>11</points_scored>
+          	<rebounds>5</rebounds>
+          	<assists>6</assists>
+        	</stats>
+      	</player>
+      	<player name="Sunil Singha" role="Small Forward" jersey_number="21">
+        	<stats>
+          	<points_scored>14</points_scored>
+          	<rebounds>6</rebounds>
+          	<assists>3</assists>
+        	</stats>
+      	</player>
+      	<player name="Ashutosh Dev" role="Power Forward" jersey_number="56">
+        	<stats>
+          	<points_scored>17</points_scored>
+          	<rebounds>7</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+      	<player name="Anadeep Bandharu" role="Centre" jersey_number="51">
+        	<stats>
+          	<points_scored>8</points_scored>
+          	<rebounds>12</rebounds>
+          	<assists>3</assists>
+        	</stats>
+      	</player>
+      	<player name="Rahul Kurmi" role="Shooting Guard" jersey_number="19">
+        	<stats>
+          	<points_scored>8</points_scored>
+          	<rebounds>2</rebounds>
+          	<assists>6</assists>
+        	</stats>
+      	</player>
+	<total_score>58</total_score>
+    	</team>
+    	
+    	<team name="IIT Kanpur" institute="IIT Kanpur">
+      	<player name="Suraj Prasad" role="Point Guard" jersey_number="40">
+        	<stats>
+          	<points_scored>12</points_scored>
+          	<rebounds>8</rebounds>
+          	<assists>8</assists>
+        	</stats>
+      	</player>
+      	<player name="Aman Singh" role="Small Forward" jersey_number="8">
+        	<stats>
+          	<points_scored>14</points_scored>
+          	<rebounds>4</rebounds>
+          	<assists>4</assists>
+        	</stats>
+      	</player>
+      	<player name="Sandeep Lala" role="Power Forward" jersey_number="100">
+        	<stats>
+          	<points_scored>11</points_scored>
+          	<rebounds>7</rebounds>
+          	<assists>6</assists>
+        	</stats>
+      	</player>
+      	<player name="Harish Singh" role="Centre" jersey_number="99">
+        	<stats>
+          	<points_scored>10</points_scored>
+          	<rebounds>4</rebounds>
+          	<assists>7</assists>
+        	</stats>
+      	</player>
+      	<player name="Rahul Das" role="Power guard" jersey_number="59">
+        	<stats>
+          	<points_scored>20</points_scored>
+          	<rebounds>6</rebounds>
+          	<assists>9</assists>
+        	</stats>
+      	</player>
+	<total_score>67</total_score>
+      	</team>
+      	
+      	</match>
+ 	 
+ 	 
+  	<match id="4" venue="IIT Madras Basketball court" status="upcoming" start_time="2023-04-04T19:00:00">
+    	<team name="IIT Guwahati" institute="IIT Guwahati">
+      	<player name="Sumit Sharma" role="Point Guard" jersey_number="5">
+        	<stats>
+          	<points_scored>8</points_scored>
+          	<rebounds>4</rebounds>
+          	<assists>7</assists>
+        	</stats>
+      	</player>
+      	<player name="Ram Prasad Kumar" role="Small Forward" jersey_number="50">
+        	<stats>
+          	<points_scored>12</points_scored>
+          	<rebounds>6</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+      	<player name="Shankadeep Singh" role="Power Forward" jersey_number="82">
+        	<stats>
+          	<points_scored>20</points_scored>
+          	<rebounds>10</rebounds>
+          	<assists>6</assists>
+        	</stats>
+      	</player>
+      	<player name="Jaydeep Varun" role="Centre" jersey_number="27">
+        	<stats>
+          	<points_scored>10</points_scored>
+          	<rebounds>11</rebounds>
+          	<assists>6</assists>
+        	</stats>
+      	</player>
+      	<player name="Sekhar Gupta" role="Shooting Guard" jersey_number="80">
+        	<stats>
+          	<points_scored>9</points_scored>
+          	<rebounds>2</rebounds>
+          	<assists>4</assists>
+        	</stats>
+      	</player>
+	<total_score>49</total_score>
+    	</team>
+    	
+    	<team name="IIT BHU" institute="IIT BHU">
+      	<player name="Suraj Thakur" role="Point Guard" jersey_number="56">
+        	<stats>
+          	<points_scored>13</points_scored>
+          	<rebounds>2</rebounds>
+          	<assists>10</assists>
+        	</stats>
+      	</player>
+      	<player name="Rupak Gupta" role="Small Forward" jersey_number="88">
+        	<stats>
+          	<points_scored>10</points_scored>
+          	<rebounds>3</rebounds>
+          	<assists>8</assists>
+        	</stats>
+      	</player>
+      	<player name="Prem Jeet Singh" role="Power Forward" jersey_number="53">
+        	<stats>
+          	<points_scored>15</points_scored>
+          	<rebounds>6</rebounds>
+          	<assists>7</assists>
+        	</stats>
+      	</player>
+      	<player name="Nandan Bhowmik" role="Shooting Guard" jersey_number="64">
+        	<stats>
+          	<points_scored>20</points_scored>
+          	<rebounds>9</rebounds>
+          	<assists>8</assists>
+        	</stats>
+      	</player>
+      	<player name="Sushant Rajput" role="Power gurad" jersey_number="15">
+        	<stats>
+          	<points_scored>15</points_scored>
+          	<rebounds>11</rebounds>
+          	<assists>5</assists>
+        	</stats>
+      	</player>
+	<total_score>73</total_score>
+      	</team>
+      	
+	</match>
+
+</tournament>
+
+
+
+
+
